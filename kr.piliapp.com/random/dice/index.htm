@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html class="cjk dice-local" lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="주사위 롤러. 온라인 주사위 도구이며 우아한 3D 애니메이션을 제공합니다." name="description"/>
+<title>주사위 던지기 🎲</title>
+<link href="/assets/coin/coin.css" rel="stylesheet"/>
+<link href="/assets/dice/dice.css?v=dice-size-v3" rel="stylesheet"/>
+<link href="/s3pxy/favicon.ico" rel="icon"/>
+<link href="/random/dice/" rel="canonical"/>
+<script defer="" src="/local-fixes.js?v=nav-reference-final1"></script>
+<script defer="" src="/assets/dice/dice-app.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<div class="col-12 col-xl-10 offset-xl-1">
+<nav aria-label="도구 탐색" class="navbar navbar-expand-lg navbar-dark bg-dark dice-navbar">
+<div class="container-fluid">
+<a class="navbar-brand" href="/">PiliApp</a>
+<button aria-expanded="false" aria-label="메뉴 열기" class="navbar-toggler" type="button"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="navbar">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item"><a class="nav-link" href="/random/wheel/">룰렛</a></li>
+<li class="nav-item active"><a aria-current="page" class="nav-link active" href="/random/dice/">주사위</a></li>
+<li class="nav-item"><a class="nav-link" href="/random/number/">난수</a></li>
+<li class="nav-item"><a class="nav-link" href="/random/coin/">동전</a></li>
+<li class="nav-item"><a class="nav-link" href="/random/list/">혼합</a></li>
+<li class="nav-item"><a class="nav-link" href="/random/lots/">추첨하다</a></li>
+<li class="nav-item"><a class="nav-link" href="/timer/countdown/">타이머</a></li>
+<li class="nav-item"><a class="nav-link" href="/time/">시계</a></li>
+<li class="nav-item"><a class="nav-link" href="/scoreboard/">스코어 보드</a></li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+</div>
+<main class="row" id="main">
+<section aria-label="주사위 도구" class="col-12 col-xl-8 offset-xl-2" id="content">
+<div aria-label="주사위 결과" class="row align-self-center justify-content-center" id="cubes-wrapper"></div>
+<p aria-live="polite" class="dice-sr-only" id="dice-total"></p>
+<div class="text-center" id="input-wrapper">
+<button class="btn btn-info" id="roll" type="button">주사위 던지기 <i>↻</i></button>
+<br/><br/>
+<div id="num-wrapper">
+<img alt="주사위 개수" height="48" src="/assets/dice/dice-icon.png" width="48"/>
+<span aria-hidden="true">X</span>
+<select aria-label="주사위 개수" id="num">
+<option value="1">1</option><option value="2">2</option><option value="3">3</option>
+<option value="4">4</option><option value="5">5</option><option value="6">6</option>
+</select>
+</div>
+</div>
+</section>
+<section class="col-12 col-xl-6 offset-xl-3" id="desc">
+<p><strong>주사위 롤러.</strong> 이것은 온라인 주사위 도구이며, 우아한 3D 애니메이션을 제공합니다. 주사위 개수를 설정할 수 있으며, 기본값은 1이고, 최대 값은 6입니다. 3D 애니메이션은 참고 용입니다. 순수한 난수를 먼저 생성 한 다음 애니메이션을 보여줍니다. 오지에 표시된 숫자는 실제 임의의 숫자를 제공 할 수 있는 기본 JavaScript API에서 생성되었습니다. 우리의 테스트에서 이것은 주사위의 난수를 생성하는 가장 좋은 방법입니다. 3D 애니메이션은 "CSS3" 방식으로 구현하였으며 최신 브라우저만 지원하며 Chrome, Edge 및 Firefox가 포함됩니다. 오래된 브라우저는 2D 정지 화면으로 저하됩니다. 이것은 확률의 문제입니다. 두 개의 주사위를 굴릴 경우 결과가 중복될 확률은 16.67%입니다. 3개의 주사위를 굴리는 경우 결과가 중복될 확률은 44.44%입니다. 이 페이지는 명시적 또는 묵시적으로 어떠한 종류의 보증도 없이 "있는 그대로" 제공됩니다. 현지 법률을 준수하십시오. 사용자는 위반에 대해 책임이 있습니다. 주사위를 굴려라! 행운을 빕니다!</p>
+<table aria-label="주사위 정보" class="dice-help-table">
+<tbody>
+<tr><td>주사위의 텍스트 심볼</td><td>⚀　⚁　⚂<br/>⚃　⚄　⚅</td></tr>
+<tr><td>주사위의 그림 이모티콘</td><td><img alt="🎲" height="32" src="/assets/dice/dice-icon-google.png" width="32"/></td></tr>
+<tr><td>오지의 이미지</td><td class="dice-image-cell"><img alt="주사위 1" height="40" src="/assets/dice/dice-icon.png" width="40"/> <img alt="주사위 2" height="40" src="/assets/dice/dice-icon-twitter.png" width="40"/> <img alt="주사위 3" height="40" src="/assets/dice/dice-icon-google.png" width="40"/></td></tr>
+</tbody>
+</table>
+</section>
+</main>
+<footer class="col-12 text-center dice-footer">
+<div><a href="/">홈</a> | <a href="/label/symbols/">기호</a> | <a href="/label/text/">폰트 사이트</a> | <a href="/label/time-and-date/">시계 &amp; 타이머</a> | <a href="/label/random/">룰렛 &amp; 추첨</a> | <a href="/label/utilities/">유틸리티</a></div>
+<div><a href="/feedback/report/" rel="nofollow">문제 신고</a> | <a href="/page/privacy/">개인정보 보호</a> | <a href="/page/terms/">약관</a> | <a href="/page/language/">🌐</a> | © 2026</div>
+<div>ᴅᴇsɪɢɴᴇᴅ ʙʏ <a href="https://pili.app/index/ko.html">pili.app</a> ɪɴ ᴛᴀɪᴡᴀɴ</div>
+</footer>
+</div>
+<template id="cube-template">
+<div class="cube">
+<div class="face face-1 d-flex justify-content-center"><span class="dot dot-1 align-self-center"></span></div>
+<div class="face face-2 d-flex justify-content-between"><span class="dot dot-1 align-self-start m-2"></span><span class="dot dot-2 align-self-end m-2"></span></div>
+<div class="face face-3 d-flex justify-content-between"><span class="dot align-self-start m-2"></span><span class="dot align-self-center"></span><span class="dot align-self-end m-2"></span></div>
+<div class="face face-4 d-flex flex-wrap justify-content-between"><div class="w-100 align-self-start d-flex justify-content-between"><span class="dot m-2"></span><span class="dot m-2"></span></div><div class="w-100 align-self-end d-flex justify-content-between"><span class="dot m-2"></span><span class="dot m-2"></span></div></div>
+<div class="face face-5 d-flex justify-content-between flex-column"><div class="w-100 align-self-start d-flex justify-content-between"><span class="dot dot-1 m-2"></span><span class="dot dot-2 m-2"></span></div><div class="w-100 align-self-center d-flex justify-content-center"><span class="dot"></span></div><div class="w-100 align-self-end d-flex justify-content-between"><span class="dot m-2"></span><span class="dot m-2"></span></div></div>
+<div class="face face-6 d-flex align-items-stretch"><div class="w-50 d-flex flex-column"><span class="dot align-self-start m-auto"></span><span class="dot align-self-center m-auto"></span><span class="dot align-self-end m-auto"></span></div><div class="w-50 d-flex flex-column"><span class="dot align-self-start m-auto"></span><span class="dot align-self-center m-auto"></span><span class="dot align-self-end m-auto"></span></div></div>
+<div class="beam beam-1"></div><div class="beam beam-2"></div><div class="beam beam-3"></div>
+</div>
+</template>
+</body>
+</html>
