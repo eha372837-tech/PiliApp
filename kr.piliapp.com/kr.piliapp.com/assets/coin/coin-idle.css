@@ -1,0 +1,5 @@
+#coin-wrapper{perspective:1000px}
+#coin-idle-frame{position:relative;width:var(--size);height:var(--size);margin:0 auto;transform-style:preserve-3d;animation:coin-idle-right 4s linear infinite;will-change:transform}
+@keyframes coin-idle-right{from{transform:rotateY(0deg)}to{transform:rotateY(360deg)}}
+#content.stop #coin-idle-frame,#content.flipping #coin-idle-frame{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){#coin-idle-frame{animation-duration:8s}}
