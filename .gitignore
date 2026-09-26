@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.admin-password
+coin-mode.json
+dice-settings.json
+*.tmp
