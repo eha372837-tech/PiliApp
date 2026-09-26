@@ -10,6 +10,7 @@
   const saveButton = document.querySelector('#coin-admin-save');
   const logoutButton = document.querySelector('#coin-admin-logout');
   const notice = document.querySelector('#coin-mode-notice');
+  const loginMessage = document.querySelector('#coin-admin-login-message');
   const message = document.querySelector('#coin-admin-message');
   const diceTarget = document.querySelector('#dice-target-sum');
   const diceSaveButton = document.querySelector('#dice-settings-save');
@@ -21,6 +22,12 @@
     message.textContent = text;
     message.dataset.error = String(kind === 'error');
     message.dataset.success = String(kind === 'success');
+  };
+  const setLoginMessage = (text, kind = '') => {
+    if (!loginMessage) return;
+    loginMessage.textContent = text;
+    loginMessage.dataset.error = String(kind === 'error');
+    loginMessage.dataset.success = String(kind === 'success');
   };
   const setDiceMessage = (text, kind = '') => {
     if (!diceMessage) return;
@@ -79,15 +86,16 @@
     event.preventDefault();
     const submit = loginForm.querySelector('button[type="submit"]');
     submit.disabled = true;
-    setMessage('로그인 확인 중…');
+    setLoginMessage('로그인 확인 중…');
     try {
       const data = await request('/api/admin/login', { password: passwordInput.value });
       passwordInput.value = '';
+      setLoginMessage('');
       setAuthenticated(true, data.mode);
       showDiceTarget(data.dice_target_sum);
       setMessage('관리자로 로그인했습니다. 이 브라우저 세션은 8시간 후 만료됩니다.', 'success');
     } catch (error) {
-      setMessage(error.message, 'error');
+      setLoginMessage(error.message, 'error');
       passwordInput.select();
     } finally {
       submit.disabled = false;

@@ -20,7 +20,7 @@
     #dice-target-sum{display:block;width:100%;min-height:2.6rem;margin:.4rem 0 .8rem;padding:.5rem .7rem;border:1px solid #aebccc;border-radius:.4rem;background:#fff;color:#172b4d}
     .admin-footnote{margin:1rem 0;color:#64748b;font-size:.88rem;line-height:1.6}
   </style>
-<script defer="" src="/assets/coin/coin-admin.js"></script>
+<script defer="" src="/assets/coin/coin-admin.js?v=login-feedback-v2"></script>
 </head>
 <body>
 <main class="admin-shell">
@@ -37,6 +37,7 @@
 <input autocomplete="current-password" id="coin-admin-password" placeholder="관리자 비밀번호 입력" required="" type="password"/>
 <button type="submit">로그인</button>
 </form>
+<p aria-live="polite" class="coin-admin-message" id="coin-admin-login-message" role="status"></p>
 <div hidden="" id="coin-admin-controls">
 <section class="admin-setting">
 <h3>동전 결과</h3>
