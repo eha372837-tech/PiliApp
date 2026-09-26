@@ -22,3 +22,6 @@ html.dice-local #cubes-wrapper .cube-wrapper{font-size:clamp(88px,10.6vw,102px)}
 html.dice-local #roll{font-size:1.1rem;padding:.55rem 1rem}
 html.dice-local #num-wrapper img{width:44px;height:44px}
 html.dice-local #num{font-size:22px;min-width:44px;width:44px;height:38px}
+
+/* Match the reference six-face: two centered columns, three evenly spaced rows. */
+.cube .face-6{display:flex!important;align-items:stretch;padding:.04em 0;box-sizing:border-box}.cube .face-6>.w-50{display:flex;flex:1 1 50%;flex-direction:column;justify-content:space-between;align-items:center;padding:0;box-sizing:border-box}.cube .face-6 .dot{align-self:auto!important;margin:0!important}

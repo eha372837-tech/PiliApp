@@ -9,7 +9,7 @@
   if (!coin || !content || !button || !result || !sides) return;
 
   // Original PiliApp motion constants and 90-segment 3D coin edge.
-  const duration = 9000;
+  const duration = 4000;
   const reducedMotionDuration = duration;
   const sideCount = 90;
   let rotationY = 0;
