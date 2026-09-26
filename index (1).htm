@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="noindex, nofollow" name="robots"/>
+<title>관리자 설정 — PiliApp 도구</title>
+<link href="/assets/coin/coin.css" rel="stylesheet"/>
+<link href="/assets/coin/coin-admin.css" rel="stylesheet"/>
+<style>
+    body{min-height:100vh;background:#f3f6fa;color:#172b4d}
+    .admin-shell{max-width:48rem;margin:3rem auto;padding:0 1rem}
+    .admin-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:1.5rem}
+    .admin-top a{color:#1769aa}
+    .admin-intro{margin:.35rem 0 1.5rem;color:#526175;line-height:1.65}
+    #coin-admin-panel{max-width:none;margin:0;background:#fff}
+    .admin-setting{margin-top:1.1rem;padding-top:1rem;border-top:1px solid #e2e8f0}
+    .admin-setting h3{font-size:1rem;margin:0 0 .6rem}
+    #dice-target-sum{display:block;width:100%;min-height:2.6rem;margin:.4rem 0 .8rem;padding:.5rem .7rem;border:1px solid #aebccc;border-radius:.4rem;background:#fff;color:#172b4d}
+    .admin-footnote{margin:1rem 0;color:#64748b;font-size:.88rem;line-height:1.6}
+  </style>
+<script defer="" src="/assets/coin/coin-admin.js?v=login-feedback-v2"></script>
+</head>
+<body>
+<main class="admin-shell">
+<div class="admin-top">
+<a href="/random/coin/">← 동전 던지기로 돌아가기</a>
+<span>관리자 전용</span>
+</div>
+<h1>도구 결과 설정</h1>
+<p class="admin-intro">관리자 인증 후 동전 결과 모드와 원본 주사위 도구의 목표 합계를 설정할 수 있습니다. 이 페이지는 일반 도구 화면에 표시되지 않습니다.</p>
+<section aria-labelledby="coin-admin-title" id="coin-admin-panel">
+<div class="coin-admin-heading"><h2 id="coin-admin-title">관리자 로그인</h2></div>
+<form id="coin-admin-login">
+<label for="coin-admin-password">관리자 비밀번호</label>
+<input autocomplete="current-password" id="coin-admin-password" placeholder="관리자 비밀번호 입력" required="" type="password"/>
+<button type="submit">로그인</button>
+</form>
+<p aria-live="polite" class="coin-admin-message" id="coin-admin-login-message" role="status"></p>
+<div hidden="" id="coin-admin-controls">
+<section class="admin-setting">
+<h3>동전 결과</h3>
+<fieldset id="coin-admin-modes">
+<legend>모든 방문자에게 적용할 결과 모드</legend>
+<label><input checked="" name="coin-mode" type="radio" value="random"/> 무작위</label>
+<label><input name="coin-mode" type="radio" value="heads"/> 항상 앞면</label>
+<label><input name="coin-mode" type="radio" value="tails"/> 항상 뒷면</label>
+</fieldset>
+<div id="coin-admin-actions">
+<button id="coin-admin-save" type="button">동전 설정 저장</button>
+<button id="coin-admin-logout" type="button">로그아웃</button>
+</div>
+<p aria-live="polite" class="coin-admin-message" id="coin-admin-message" role="status"></p>
+</section>
+<section aria-labelledby="dice-admin-title" class="admin-setting">
+<h3 id="dice-admin-title">주사위 합계</h3>
+<label for="dice-target-sum">1~6개 주사위의 목표 합계 (1–36)</label>
+<select id="dice-target-sum"><option value="random">무작위 합계</option><option value="1">합계 1</option><option value="2">합계 2</option><option value="3">합계 3</option><option value="4">합계 4</option><option value="5">합계 5</option><option value="6">합계 6</option><option value="7">합계 7</option><option value="8">합계 8</option><option value="9">합계 9</option><option value="10">합계 10</option><option value="11">합계 11</option><option value="12">합계 12</option><option value="13">합계 13</option><option value="14">합계 14</option><option value="15">합계 15</option><option value="16">합계 16</option><option value="17">합계 17</option><option value="18">합계 18</option><option value="19">합계 19</option><option value="20">합계 20</option><option value="21">합계 21</option><option value="22">합계 22</option><option value="23">합계 23</option><option value="24">합계 24</option><option value="25">합계 25</option><option value="26">합계 26</option><option value="27">합계 27</option><option value="28">합계 28</option><option value="29">합계 29</option><option value="30">합계 30</option><option value="31">합계 31</option><option value="32">합계 32</option><option value="33">합계 33</option><option value="34">합계 34</option><option value="35">합계 35</option><option value="36">합계 36</option></select>
+<button id="dice-settings-save" type="button">주사위 설정 저장</button>
+<p aria-live="polite" class="coin-admin-message" id="dice-settings-message" role="status"></p>
+</section>
+</div>
+<p aria-live="polite" class="coin-admin-message" id="coin-mode-notice" role="status">설정을 확인하는 중…</p>
+</section>
+<p class="admin-footnote">주사위 개수는 이용자가 1~6개에서 선택합니다. 지정 합계가 해당 개수로 불가능하면 가능한 개수로 자동 맞추며, 이용자 화면에 지정 모드임을 표시합니다.</p>
+</main>
+</body>
+</html>
